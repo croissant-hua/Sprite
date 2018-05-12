@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>雪碧图-小人动起来1</title>
+    <!-- 雪碧图：多张小图合并成一张大图。优点：避免每个小图的网络请求，在制作动画时更流畅 -->
+    <style type="text/css">
+        .people {
+            margin: 250px;
+            width: 125px;
+            /*宽度一定要设置能容下整个小人部分*/
+            height: 135px;
+            background: url(littleP.jpg);
+            /* -webkit-animation: run 1s steps(1) 0s infinite both; */
+            animation: run 1s steps(1) 0s infinite both;
+        }
+        /*keyframes规则:将一套CSS样式逐渐变化为另一套样式
+        以百分比来规定改变发生的时间，或者通过关键词 "from" 和 "to"，等价于 0% 和 100%。
+        0% 是动画的开始时间，100% 动画的结束时间。
+        为了获得最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。*/
+        
+        @keyframes run {
+            0% {
+                background-position: 0 0;
+                /*坐标x,y*/
+            }
+            10% {
+                background-position: -100% 0;
+            }
+            20% {
+                background-position: -200% 0;
+            }
+            30% {
+                background-position: -300% 0;
+            }
+            40% {
+                background-position: -400% 0;
+            }
+            50% {
+                background-position: 0 -100%;
+            }
+            60% {
+                background-position: -100% -100%;
+            }
+            70% {
+                background-position: -200% -100%;
+            }
+            80% {
+                background-position: -300% -100%;
+            }
+            90% {
+                background-position: -400% -100%;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="people"></div>
+</body>
+
+</html>

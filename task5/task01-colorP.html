@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>雪碧图-图片颜色渐变</title>
+    <style type="text/css">
+        body {
+            background: #000;
+        }
+        
+        .people {
+            margin: 250px;
+            /* width: 79px;
+            /*宽度一定要设置能容下整个小人部分
+            height: 100px; */
+            width: 687px;
+            height: 750px;
+            background: url(jianzhu1.png);
+            /* -webkit-animation: run 1s steps(3) 0s infinite both; */
+            animation: run 1s steps(3) 0s infinite both;
+            /* steps函数接受两个参数，第一个参数根据指定的步进数量，把整个动画切分为多帧，第二个（可选）参数可以是start或end(默认),指定
+            动画在每个循环周期的什么位置发生帧的切换动作。 
+            step-start等于steps(1,start);steps-end等于steps(1,end)*/
+        }
+        
+        @keyframes run {
+            to {
+                background-position: -300% 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="people"></div>
+</body>
+
+</html>
